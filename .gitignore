@@ -2,7 +2,6 @@
 .user_profiles
 
 # Scripts e logs locais
-dev.sh
 *.log
 
 # Arquivos de sistema
