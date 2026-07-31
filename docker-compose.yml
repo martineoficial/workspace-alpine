@@ -1,0 +1,19 @@
+services:
+  workspace:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USERNAME: dianapontes
+        USER_UID: 1000
+        USER_GID: 1000
+    container_name: alpine_workspace
+    hostname: alpine-dev
+    user: dianapontes
+    volumes:
+      - .:/home/dianapontes/workspace
+    environment:
+      - TERM=xterm-256color
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
